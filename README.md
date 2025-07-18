@@ -1,3 +1,4 @@
+
 <p align="center">
   <img src="doc/demo/logo.png" width="10%" />
 </p>
@@ -6,224 +7,198 @@
 <h1>Cloud Mail</h1>
 </div>
 <div align="center">
-    <h4>使用Vue3开发的响应式简约邮箱服务，支持邮件发送附件收发，可以部署到Cloudflare云平台实现免费白嫖🎉</h4> 
+    <h4>A minimalist and responsive email service developed with Vue3, supporting attachments for sending and receiving emails. Can be deployed on Cloudflare for free 🎉</h4> 
 </div>
 
 
-## 项目简介
+## Project Overview
 
-只需要一个域名，就可以创建多个不同的邮箱，类似各大邮箱平台 QQ邮箱，谷歌邮箱等，本项目使用Cloud flare部署，Rsend推送邮件，无需服务器费用，搭建属于自己的邮箱服务
+All you need is a domain to create multiple different mailboxes, similar to platforms like QQ Mail and Gmail. This project is deployed on Cloudflare, uses Resend for email delivery, and requires no server fees — build your own email service.
 
+## Live Demo
 
+[**👉 Live Demo**](https://skymail.ink)
 
-## 项目展示 
-
-[**👉 在线演示**](https://skymail.ink)
-
-[**👉 小白保姆教程-界面部署**](https://doc.skymail.ink)
+[**👉 Beginner-friendly Interface Deployment Tutorial**](https://doc.skymail.ink)
 
 | ![](/doc/demo/demo1.png) | ![](/doc/demo/demo2.png) |
 |--------------------------|---------------------|
-| ![](/doc/demo/demo3.png)      | ![](/doc/demo/demo4.png) |
-| ![](/doc/demo/demo5.png)      | ![](/doc/demo/demo6.png) |
-| ![](/doc/demo/demo7.png)      | ![](/doc/demo/demo8.png) |
+| ![](/doc/demo/demo3.png) | ![](/doc/demo/demo4.png) |
+| ![](/doc/demo/demo5.png) | ![](/doc/demo/demo6.png) |
+| ![](/doc/demo/demo7.png) | ![](/doc/demo/demo8.png) |
 
 
+## Features
+
+- **💰Free to Use**: No server needed, deploy to Cloudflare Workers and use for free
+
+- **💻Responsive Design**: Responsive layout adapts to PC and most mobile browsers
+
+- **📧Email Sending**: Integrated with Resend, supports bulk sending, embedded images, attachments, and delivery status tracking
+
+- **🛡️Admin Features**: Manage users and emails with RBAC permissions and usage restrictions
+
+- **🔀Multi-account Mode**: One user can have multiple mailboxes (default is one user, one mailbox), like major email platforms
+
+- **📦Attachments**: Send and receive attachments using R2 object storage
+
+- **🔔Email Push**: Incoming emails can be forwarded to Telegram bots or other providers
+
+- **📈Data Visualization**: Visual stats on system and user email growth via ECharts
+
+- **⭐Starred Emails**: Mark important emails for quick access
+
+- **🎨Customization**: Set site title, login background, transparency, etc.
+
+- **⚙️Feature Toggles**: Enable/disable registration, email sending, adding users, etc. Set as private site
+
+- **🤖Human Verification**: Integrated with Turnstile to prevent bulk bot registrations
+
+- **📜More Features**: In development...
 
 
-## 功能介绍
+## Tech Stack
 
-- **💰免费白嫖**：无需服务器，部署到Cloudflare Workers 免费使用，不要钱
+- **Frontend Framework**: [Vue3](https://vuejs.org/) + [Element Plus](https://element-plus.org/) 
 
-- **💻响应式设计**：响应式布局自动适配PC和大部分手机端浏览器
+- **Web Framework**: [Hono](https://hono.dev/)
 
-- **📧邮件发送**：集成resend发送邮件，支持群发，内嵌图片和附件发送，发送状态查看
+- **ORM**: [Drizzle](https://orm.drizzle.team/)
 
-- **🛡️管理员功能**：可以对用户，邮件进行管理，RABC权限控制对功能及使用资源限制
+- **Platform**: [Cloudflare Workers](https://developers.cloudflare.com/workers/)
 
-- **🔀多号模式**：开启后一个用户可以添加多个邮箱，默认一用户一邮箱，类似各大邮箱平台
+- **Email Provider**: [Resend](https://resend.com/)
 
-- **📦附件收发**：支持收发附件，使用R2对象存储保存和下载文件
+- **Cache**: [Cloudflare KV](https://developers.cloudflare.com/kv/)
 
-- **🔔邮件推送**：接收邮件后可以转发到TG机器人或其他服务商邮箱
+- **Database**: [Cloudflare D1](https://developers.cloudflare.com/d1/)
 
-- **📈数据可视化**：使用echarts对系统数据详情，用户邮件增长可视化显示
+- **File Storage**: [Cloudflare R2](https://developers.cloudflare.com/r2/)
 
-- **⭐星标邮件**：标记重要邮件，以便快速查阅
+## Setup Guide
 
-- **🎨个性化设置**：可以自定义网站标题，登录背景，透明度
+### Requirements
 
-- **⚙️功能设置**：可以对注册，邮件发送，添加等功能关闭和开启，设为私人站点
+Node.js v18.20+
 
-- **🤖人机验证**：集成Turnstile人机验证，防止人机批量注册
-
-- **📜更多功能**：正在开发中...
+Cloudflare account (with bound domain)
 
 
-
-## 技术栈
-
-- **框架**：[Vue3](https://vuejs.org/) + [Element Plus](https://element-plus.org/) 
-
-- **Web框架**：[Hono](https://hono.dev/)
-
-- **ORM：**[Drizzle](https://orm.drizzle.team/)
-
-- **平台：** [Cloudflare workers](https://developers.cloudflare.com/workers/)
-
-- **邮件推送：** [Resend](https://resend.com/)
-
-- **缓存**：[Cloudflare KV](https://developers.cloudflare.com/kv/)
-
-- **数据库**：[Cloudflare D1](https://developers.cloudflare.com/d1/)
-
-- **文件存储**：[Cloudflare R2](https://developers.cloudflare.com/r2/)
-
-
-
-
-
-## 使用教程
-
-### 环境要求
-
-Nodejs v18.20 +
-
-Cloudflare 账号 (需要绑定域名)
-
-
-**克隆项目到本地**
-``` shell
-git clone https://github.com/LaziestRen/cloud-mail #拉取代码
-cd cloud-mail/mail-worker #进入worker目录
+**Clone the project locally**
+```shell
+git clone https://github.com/LaziestRen/cloud-mail
+cd cloud-mail/mail-worker
 ```
 
-**安装依赖**
+**Install dependencies**
 ```shell
 npm i
 ```
 
-**项目配置**
+**Configuration**
 
 mail-worker/wrangler.toml
 
 ```toml
 [[d1_databases]]
-binding = "db"			#d1数据库绑定名默认不可修改
-database_name = ""		#d1数据库名字
-database_id = ""		#d1数据库id
+binding = "db"
+database_name = ""
+database_id = ""
 
 [[kv_namespaces]]
-binding = "kv"			#kv绑定名默认不可修改
-id = ""			        #kv数据库id
-
+binding = "kv"
+id = ""
 
 [[r2_buckets]]
-binding = "r2"                  #r2对象存储绑定名默认不可修改
-bucket_name = ""	        #r2对象存储桶的名字
-	
+binding = "r2"
+bucket_name = ""
 
 [assets]
-binding = "assets"		#静态资源绑定名默认不可修改
-directory = "./dist"	        #前端vue项目打包的静态资源存放位置,默认dist
+binding = "assets"
+directory = "./dist"
 
 [vars]
 orm_log = false
-domain = []			#邮件域名可以配置多个示例: ["example1.com","example2.com"]
-admin = ""		        #管理员的邮箱 示例: admin@example.com
-jwt_secret = ""			#登录身份令牌的密钥,随便填一串字符串
-
+domain = []          # e.g. ["example1.com","example2.com"]
+admin = ""           # e.g. admin@example.com
+jwt_secret = ""
 ```
 
+**Remote Deployment**
 
+1. Create KV, D1, R2 on Cloudflare Console
+2. Configure `wrangler.toml` with your environment values
+3. Run:
+```shell
+npm run deploy
+```
+4. Cloudflare → Your Domain → Email → Routing → Catch-all → Route to Worker
 
-**远程部署**
+5. Visit `https://your-domain/api/init/your_jwt_secret` in browser to init or update d1/kv
 
-1. 在 Cloudflare 控制台创建KV，D1数据库，R2对象存储
-2. 在项目目录 mail-worker/wrangler.toml 配置文件中配置对应环境变量，以及创建的数据库id和名称
-3. 执行远程部署命令
+6. Log into the site, go to Settings (as admin) to set R2 domain, Turnstile key, etc.
 
-    ```shell
-    npm run deploy 
-    ```
+[👉 Deploy with Github Action](/doc/github-action.md)
 
-4. 在Cloudflare→账户主页→你的域名→电子邮件→电子邮件路由→路由规则→Catch-all地址，编辑发送到worker
+**Local Development**
 
-5. 浏览器输入  https://你的项目域名/api/init/你的jwt_secret   初始化或更新 d1和kv数据库
+1. Local databases and storage are automatically created in `.wrangler`
+```shell
+npm run dev
+```
+2. Visit `http://127.0.0.1:8787/api/init/your_jwt_secret`
 
-6. 部署完成登录网站，使用管理员账号可以在设置页面添加配置 R2域名 Turnstile密钥 等
+3. For R2 URL in settings, use `http://127.0.0.1:8787/api/file`
 
+**Email Sending via Resend**
 
-[👉 使用 Github Action 部署](/doc/github-action.md)
+1. Sign up at Resend, go to Domains → Add & verify domain
+2. Go to API Keys → Create Key → Copy token → Paste in project settings
 
-**本地运行**
+3. Go to Webhooks → Add `https://your-domain/api/webhooks` → Select all relevant events
 
-1. 本地运行，数据库，对象存储会自动安装，无需创建，数据库数据保存在 mail-worker/.wrangler文件夹
-
-    ```shell
-    npm run dev 
-    ```
-2. 浏览器输入   http://127.0.0.1:8787/api/init/你的jwt_secret   初始化d1和kv数据库
-
-3. 本地运行项目设置页面r2域名可设置为  http://127.0.0.1:8787/api/file
-
-**邮件发送**
-
-1. 在 resend 官网注册后，点击左侧 Domains 添加并验证你的域名，等待验证完成
-2. 点击左侧 Api Keys 创建立api key， 复制token回到项目网站设置页面添加 resend token
-
-3. 点击左侧 Webhooks 添加回调地址  https://你的项目域名/api/webhooks 
-
-   勾选✅ (email.bounced email.complained email.delivered email.delivery_delayed)
-
-## 目录结构
+## Directory Structure
 
 ```
 cloud-mail
-├── mail-worker				#worker后端项目
-│   ├── src                  
-│   │   ├── api	 			#接口层			
-│   │   ├── const  			#常量
-│   │   ├── email			#邮件接收
-│   │   ├── entity			#数据库实体层
-│   │   ├── error			#自定义异常
-│   │   ├── hono			#web框架配置 拦截器等
-│   │   ├── init			#数据库缓存初始化
-│   │   ├── model			#响应体数据封装
-│   │   ├── security			#身份认证层
-│   │   ├── service			#服务层
-│   │   ├── utils			#工具类
-│   │   └── index.js			#入口文件
-│   ├── pageckge.json			#项目依赖
-│   └── wrangler.toml			#项目配置
-└── mail-vue				#vue前端项目
+├── mail-worker
+│   ├── src
+│   │   ├── api
+│   │   ├── const
+│   │   ├── email
+│   │   ├── entity
+│   │   ├── error
+│   │   ├── hono
+│   │   ├── init
+│   │   ├── model
+│   │   ├── security
+│   │   ├── service
+│   │   ├── utils
+│   │   └── index.js
+│   ├── package.json
+│   └── wrangler.toml
+└── mail-vue
     ├── src
-    │   ├── assets			#静态资源字体等
-    │   ├── axios 			#axios配置
-    │   ├── components			#自定义组件
-    │   ├── layout			#主体布局组件
-    │   ├── request			#api接口
-    │   ├── router			#路由配置
-    │   ├── store			#全局状态管理
-    │   ├── utils			#工具类
-    │   ├── views			#页面组件
-    │   ├── app.vue			#根组件
-    │   ├── main.js			#入口js
-    │   └── style.css			#全局css
-    ├── package.json			#项目依赖
-    └── env.dev				#项目配置
+    │   ├── assets
+    │   ├── axios
+    │   ├── components
+    │   ├── layout
+    │   ├── request
+    │   ├── router
+    │   ├── store
+    │   ├── utils
+    │   ├── views
+    │   ├── app.vue
+    │   ├── main.js
+    │   └── style.css
+    ├── package.json
+    └── env.dev
 ```
 
+## License
 
+This project is licensed under [MIT](LICENSE)
 
-## 许可证
-
-本项目采用 [MIT](LICENSE) 许可证	
-
-
-## 交流
+## Community
 
 [Telegram](https://t.me/cloud_mail_tg)
-
-
-
