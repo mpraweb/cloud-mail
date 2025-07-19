@@ -12,12 +12,12 @@ enabled = true
 #database_id = ""		#d1数据库id
 
 #[[kv_namespaces]]
-#binding = "kv"			#kv绑定名默认不可修改
-#id = ""					#kv数据库id
+#binding = "mail53"			#kv绑定名默认不可修改
+#id = "66a5d0f1cd0243fea0102de68cff7c80"					#kv数据库id
 
 #[[r2_buckets]]
 #binding = "r2"			#r2对象存储绑定名默认不可修改
-#bucket_name = ""		#r2对象存储桶的名字
+#bucket_name = "mail53"		#r2对象存储桶的名字
 
 [assets]
 binding = "assets"		#静态资源绑定名默认不可修改
